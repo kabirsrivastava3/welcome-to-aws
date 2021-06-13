@@ -26,7 +26,8 @@ const routes: Routes = [
   {
     path: 'contact-us',
     component: ContactUsComponent,
-  }
+  },
+  {path: '**', redirectTo: '/home'}
 
 ];
 

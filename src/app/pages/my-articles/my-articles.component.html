@@ -6,30 +6,19 @@
   </div>
 
   <div class="row articles">
-    <div class="col-md-4">
+    <div *ngFor="let article of allArticles" class="col-md-4">
       <div class="card article">
-        <img src="assets/1.png" class="card-img-top article-image" alt="..." />
+        <img src="assets/{{article.image}}" class="card-img-top article-image" alt="..." />
         <div class="card-body">
-          <h5 class="card-title">Palo Alto Networks</h5>
+          <h5 class="card-title">{{article.title}}</h5>
           <p class="card-text">
-            The integration of the VM-Series Virtual Next-Generation Firewall with the new Amazon VPC Ingress Routing feature makes it much easier for customers to ensure that all ingress traffic to their VPC is filtered through our threat prevention services.
+           {{ article.describe }}
           </p>
-          <a href="https://aws.amazon.com/vpc/?nc2=h_ql_prod_fs_vpc" class="btn btn-primary">Read Full Article Here</a>
+          <a href="{{article.link}}" class="btn btn-primary">Read Full Article Here</a>
         </div>
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="card article">
-        <img src="assets/2.png" class="card-img-top article-image" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Fortinet</h5>
-          <p class="card-text">
-            Amazon VPC Ingress routing allows Fortinet to offer more confidence to customers by enabling Fortinet network security on any traffic entering their business critical VPC’s. VPC Ingress Routing also allows for much more flexible solutions that help secure different workloads with separate Fortinet Products in a single VPC.
-          </p>
-          <a href="https://aws.amazon.com/vpc/?nc2=h_ql_prod_fs_vpc" class="btn btn-primary">Read Full Article Here</a>
-        </div>
-      </div>
-    </div>
+    
     <div class="col-md-4">
       <div class="card article">
         <img src="assets/3.png" class="card-img-top article-image" alt="..." />
